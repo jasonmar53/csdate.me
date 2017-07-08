@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">  
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="static/question.css">
+      <title> Advanced Search </title>
+   </head>
+      <body>
+         <div class="container">
+            <div>
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/logout" role="button">Log Out</a>
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/main" role="button">Home</a>
+            </div>
+
+            <div class = "col-xs-12 logo">
+               <img src = "static/images/logo.png" alt = "logo.png">
+            </div>
+
+            <form method="GET">
+
+               <div class = "col-xs-4 searchoption"> </div>
+                  <div class = "col-xs-8 searchoption">
+                     <input type = "radio" name = "required" value = "AND" checked> Must match all requirements<br>
+                     <input type = "radio" name = "required" value = "OR"> Must match at least one requirement<br>
+                  </div>
+
+
+               <div class = "col-xs-12 filler"><br> </div>
+
+
+               <div class="col-xs-4 names"> 
+                  First Name
+               </div>
+
+               <div class = "col-xs-8 names">
+                  <div class = "col-xs-4 blah">
+                     <input type = "text" name = "firstName" ><br><br>
+                  </div>
+               </div>
+
+               <div class = "col-xs-4 names">
+                  Middle Name
+               </div>
+
+               <div class = "col-xs-8 names">
+                  <div class = "col-xs-4 blah"> 
+                     <input type = "text" name = "middleName"><br><br>
+                  </div>
+               </div>
+
+               <div class = "col-xs-4 names">
+                  Last Name
+               </div>
+
+               <div class = "col-xs-8 blah">
+                  <div class = "col-xs-4 blah">                
+                     <input type = "text" name = "lastName" > <br><br>
+                  </div>
+               </div>
+               
+         
+               <div class = "col-xs-4 Gender">
+                  Gender <br>
+               </div>
+
+               <div class = "col-xs-8 Gender">
+                  <div class ="col-xs-4 Gender">
+                     <select name = "gender">
+                        <option value "">  <br>
+                        <option value="m"> Male <br>
+                        <option value ="f"> Female <br>
+                        <option value="o"> Other <br>
+                        <option value="d"> Declined to state <br>
+                        <option value="t"> Transgender <br><br>
+                     </select>
+                  </div>
+               </div>
+
+               <div class ="col-xs-4">
+                  <br>Interested in
+               </div>
+               <div class ="col-xs-8 interested">
+                  <div class ="col-xs-4 insterested">
+                  <br><select name = "interest">   
+                     <option value = ""> <br>
+                     <option value ="m"> Males <br>
+                     <option value ="f"> Females <br>
+                     <option value ="t"> Transgenders <br>
+                     <option value ="o"> Other <br>
+                     <option value ="a"> Doesn't Matter / Any <br>
+                  </select>    
+               </div>
+            </div>
+
+
+         <div class = "col-xs-12 filler"><br> </div>
+
+         <div class = "col-xs-4 states">
+               State
+         </div>
+            <div class = "col-xs-8 states">
+               <div class = "col-xs-4 states">
+               <td> <select name="state" >
+                  <option value = ""></option>
+                  <option value = "Alabama">AL</option>
+                  <option value = "Alaska">AK</option>
+                  <option value = "Arizona">AZ</option>
+                  <option value = "Arkansas">AR</option>
+                  <option value = "California">CA</option>
+                  <option value = "Colorado">CO</option>
+                  <option value = "Connecticut">CT</option>
+                  <option value = "DC">DC</option>
+                  <option value = "Delaware">DE</option>   
+                  <option value = "Florida">FL</option>
+                  <option value = "Georgia">GA</option>
+                  <option value = "Hawaii">HI</option>
+                  <option value = "Idaho">ID</option>
+                  <option value = "Illinois">IL</option>
+                  <option value = "Indiana">IN</option>
+                  <option value = "Iowa">IA</option>
+                  <option value = "Kansas">KS</option>
+                  <option value = "Kentucky">KY</option>
+                  <option value = "Louisiana">LA</option>
+                  <option value = "Maine">ME</option>
+                  <option value = "Maryland">MD</option>   
+                  <option value = "Massachusetts">MA</option>
+                  <option value = "Michigan">MI</option>
+                  <option value = "Minnesota">MN</option>
+                  <option value = "Mississippi">MS</option>
+                  <option value = "Missouri">MO</option>
+                  <option value = "Montana">MT</option>
+                  <option value = "Nebraska">NE</option>
+                  <option value = "Nevada">CA</option>
+                  <option value = "New Hampshire">NH</option>
+                  <option value = "New Jersey">NJ</option>
+                  <option value = "New Mexico">NM</option>
+                  <option value = "New York">NY</option>   
+                  <option value = "North Carolina">NC</option>
+                  <option value = "North Dakota">ND</option>
+                  <option value = "Ohio">OH</option>
+                  <option value = "Oklahoma">OK</option>
+                  <option value = "Oregon">OR</option>
+                  <option value = "Pennsylvania">PA</option>
+                  <option value = "Rhode Island">RI</option>
+                  <option value = "South Carolina">SC</option>
+                  <option value = "South Dakota">SD</option>
+                  <option value = "Tennessee">TN</option>
+                  <option value = "Texas">TX</option>
+                  <option value = "Utah">UT</option>   
+                  <option value = "Vermont">VT</option>
+                  <option value = "Virginia">VA</option>
+                  <option value = "Washington">WA</option>
+                  <option value = "West Virginia">WV</option>   
+                  <option value = "Wisconsin">WI</option>
+                  <option value = "Wyoming">WY</option>
+                  <option value = "N/A">N/A</option>   
+               </select>
+            </div>
+         </div>
+   
+         <div class = "col-xs-12 filler"> </div>
+
+         <div class = "col-xs-4 city">
+           <br> City
+         </div>
+
+         <div class = "col-xs-8 city">
+            <div class = "col-xs-4 city">
+               <br><input type = "text" name = "city" > <br>
+            </div>
+         </div>
+
+         <div class = "col-xs-12 filler"> </div>
+
+         <div class = "col-xs-4 favoriteOs">
+            <br> Favorite OS
+         </div>
+
+         <div class = "col-xs-8 favoriteOs">
+            <div class = "col-xs-4 favoriteOs">    
+               <br> <select name ="favoriteOS">
+                  <option value =""> </option>
+                  <option value ="windows"> Windows </option>
+                  <option value ="linux"> Linux </option>
+                  <option value ="OS X"> OS X </option>
+               </select> <br>
+            </div>
+         </div>         
+
+         <div class = "col-xs-12 filler"> </div>
+
+         <div class = "col-xs-4 smartphoneOs">
+            <br> Smartphone OS <br>
+         </div> 
+
+         <div class = "col-xs-8 smartphoneOs">
+            <div class = "col-xs-4 smartphoneOs">
+               <br> <select name = "phoneOS">
+                  <option value = "">   </option>
+                  <option value = "android"> Android </option>
+                  <option value = "ios"> iOS </option>
+                  <option value = "windows"> Windows </option>
+                  <option value = "n/a"> No smartphone </option>
+               </select>
+            </div>
+         </div> 
+
+         <div class = "col-xs-12 filler"> </div>
+
+         <div class = "col-xs-4 relationshipStatus">
+            <br> Relationship status <br>
+         </div>
+
+         <div class = "col-xs-8 relationshipStatus">
+            <div class = "col-xs-4 relationshipStatus">
+               <br> <select name = "relationship" >
+                  <option value = "">  </option>
+                  <option value = "single"> Single </option>
+                  <option value = "taken"> In a relationship / Married </option>
+                  <option value = "single"> What's a Relationship? </option>
+                  <option value = "declined"> Declined to state </option>
+               </select>
+            </div>
+         </div>
+
+         <div class = "col-xs-12 filler"> </div>
+
+         <div class = "col-xs-4 favoriteGamingSystem">
+            <br> Gaming preference <br>
+         </div>
+
+         <div class = "col-xs-8 favoriteGamingSystem">
+            <div class = "col-xs-4 relationshipStatus">
+             <br>  <select name = "gaming" >
+                  <option value = "">  </option>
+                  <option value = "pc"> PC </option>
+                  <option value = "xbox"> Xbox </option>
+                  <option value = "xbox 360"> Xbox 360 </option>
+                  <option value = "xbox one"> Xbox One </option>
+                  <option value = "playstation 1"> Playstation 1 </option>
+                  <option value = "playstation 2"> Playstation 2 </option>
+                  <option value = "playstation 3"> Playstation 3 </option>
+                  <option value = "playstation 1"> Playstation 4 </option>
+                  <option value = "nintendo 64"> Nintendo 64 </option>
+                  <option value = "gamecube"> Gamecube </option>
+                  <option value = "wii"> Wii </option>
+                  <option value = "wii u"> Wii U </option>
+                  <option value = "oldschool"> Old school </option> 
+                  <option value = ""> I don't game </option>
+               </select>
+            </div>
+         </div>         
+
+         <div class = "col-xs-12 filler"> </div>
+
+         <div class = "col-xs-4 favoritelanguage">
+           <br>  #1 Favorite Language 
+         </div>
+
+         <div class = "col-xs-8 favoritelanguage">
+            <div class = "col-xs-4 favoritelanguage">
+               <br> <input type = "text" name = "favLang1" ><br>
+            </div>
+         </div>
+
+         <div class = "col-xs-12 filler"></div>
+
+         <div class = "col-xs-4 favoritelanguage">
+           <br>  #2 Favorite Language 
+         </div>
+
+         <div class = "col-xs-8 favoritelanguage">
+            <div class = " col-xs-4 favoritelanguage">
+               <br> <input type = "text" name = "favLang2"><br>
+            </div>
+         </div>
+
+         <div class = "col-xs-12 filler"></div>
+
+         <div class = "col-xs-4 favoritelanguage">
+           <br>  #3 Favorite Language 
+         </div>
+
+         <div class = "col-xs-8 favoritelanguage">
+            <div class = " col-xs-4 favoritelanguage">
+               <br> <input type = "text" name = "favLang3"><br>
+            </div>
+         </div>
+
+         <div class = "col-xs-12 filler"></div>
+
+         
+         <div class = "col-xs-4 wpm">
+            <br>WPM (range) Inclusive
+         </div>
+
+         <div class = "col-xs-8 wpm">
+            <div class = "col-xs-4 wpm">
+               <br><input type = "text" name = "wpm" min = "0" step = "1" placeholder = "x-x">
+            </div>
+         </div> 
+
+
+<!-- temp fix for submit location? -->      
+         <div class = "col-xs-5" > </div>
+
+         <div class = "col-xs-7 submit">
+            <br> <input type="submit" name = "submit">
+         </div>
+
+         </div> 
+         </form>
+   </body>
+</html>

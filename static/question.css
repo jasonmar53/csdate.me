@@ -1,0 +1,23 @@
+
+/* added body so text boxes are more visible */
+.container {
+	width: 900px;
+	margin: auto;
+	margin-bottom: 200px;
+}
+
+.logo img {
+   width: 300px;
+   display: block;
+   margin: auto;
+}
+
+.btn-space {
+   margin-top: 2px;
+   margin-left: 5px;
+   margin-bottom: 3px;
+}
+
+.field {
+   margin-bottom: 10px;
+}

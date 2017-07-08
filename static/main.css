@@ -1,0 +1,112 @@
+html, body {
+   height: 100%;
+   overflow-x: hidden;
+}
+.content {
+   background-color: yellow;
+}
+
+.button {
+   background-color: #4CBF43;
+   text-align: center;
+   display: inline-block;
+   font-size: 32px;
+   padding: 50px 40px;
+   border-radius: 8px;
+}
+
+.block {
+	height:7%;
+	background-color: #7CAED6;
+	position: relative;
+}
+
+.space {
+	height:2%;
+}
+
+.block img {
+	max-height: 100%;
+	max-width: 100%;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+.search {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	position:relative;
+	left:50%;
+	transform: translate(-12.5%, 0%);
+}
+
+.searchButton {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.searchButton button {
+	width:80px;
+	position:relative;
+	left:50%;
+	transform: translate(-40px,0px);
+}
+
+.whitelogo img {
+	height:100%;
+}
+
+.loginContainer {
+   position: relative;
+   height: 90%;
+}
+.loginPanel {
+	padding: 10px;
+	background-color: white;
+   position: absolute;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 400px;
+}
+
+@media only screen  
+and (max-device-width : 800px) {
+   .loginPanel {
+      width: 50%;
+   }
+}
+
+.logo img {
+   width: 100%;
+}
+
+.btn-space {
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 3px;
+}
+
+.profile .img-responsive {
+	margin: 0 auto;
+	width: auto;
+	max-height: 400px;
+}
+
+.profile {
+	padding-top: 10px;
+}
+
+.entries .img-responsive {
+	max-width: 600px;
+	max-height: 200px;
+	margin:0 auto;
+}
+
+.nameHeader {
+	color: #7CAED6;
+}

@@ -1,0 +1,81 @@
+$def with (tuple)
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="static/main.css">
+   <title>Personal Profile</title>
+</head>
+<body>
+   <div class="container-fluid row">
+      <div class="col-xs-12 block">
+         <div class="whitelogo">
+            <img src="/static/images/logo-white.png" alt="CSDate.me">
+         </div>
+         <form method="POST">
+            <div class="homeAndLogout">
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/logout" role="button">Log Out</a>
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/main" role="button">Home</a>
+            </div>
+         </form>
+      </div>
+      <div class="profile col-xs-4"></div>
+      <div class="profile col-xs-4">
+         <div class="page-header">
+            <h1 class="text-center">$tuple[2] $tuple[3] $tuple[4]</h1>
+            <h3 class="text-center">Contact me: $tuple[26]</h3> 
+         </div>
+         <img src="static/images/$tuple[20]" alt="alt" class="img-responsive">
+         <div class="well">
+            <h4 class="text-center">About me: $tuple[21]</h4>
+            $if tuple[5] == 'm':
+               <h4 class="text-center">Gender: Male</h4>
+            $elif tuple[5] == 'f':
+               <h4 class="text-center">Gender: Female</h4>
+            $elif tuple[5] == 't':
+               <h4 class="text-center">Gender: Transgender</h4>
+            $elif tuple[5] == 'o':
+               <h4 class="text-center">Gender: Other</h4>
+            $elif tuple[5] == 'd':
+               <h4 class="text-center">Gender: Declined to state</h4>
+            <h4 class="text-center">Interested in 
+               $if tuple[22] == 'm':
+                  Male
+               $if tuple[22] == 'f':
+                  Female
+               $if tuple[22] == 't':
+                  Transgender
+               $if tuple[22] == 'o':
+                  Other
+               $if tuple[22] == 'a':
+                  All
+            <h4 class="text-center">$tuple[11]</h4>
+            <h4 class="text-center">$tuple[7], $tuple[6] </h4>
+            <h4 class="text-center">DOB: $tuple[8]</h4>
+            <h4 class="text-center">Favorite OS: $tuple[9]</h4>
+            <h4 class="text-center">Phone OS: $tuple[10]</h4>
+            <h4 class="text-center">Preferred Gaming: $tuple[12]</h4>
+            <h4 class="text-center">
+               Favorite Languages: <br>
+                  $tuple[13]<br>
+                  $if (tuple[14] != ""):
+                     $tuple[14]<br>
+                  $if (tuple[15] != ""):
+                     $tuple[15]<br>
+               <br>
+               Favorite Hobby:<br>
+                  $tuple[16]<br>
+                  $if (tuple[17] != ""):
+                     $tuple[17]<br>
+                  $if (tuple[18] != ""):
+                     $tuple[18]<br>
+            </h4>
+            <h4 class="text-center">WPM: $tuple[19]</h4>
+         </div>
+      </div>
+      <div class="profile col-xs-4"></div>
+   </div>
+</body>
+</html>

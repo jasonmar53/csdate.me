@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="static/question.css">
+      <title> Update your profile: </title>
+   </head>
+   <body>
+      <div class="row">
+      <div class = "col-xs-12">
+           <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/logout" role="button">Log Out</a>
+           <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/main" role="button">Home</a>
+      </div>
+      </div>
+      <div class = "col-xs-12 logo">
+         <a href="http://www.csdate.me/main"><img src = "static/images/logo.png" alt = "logo.png"></a>
+      </div>
+      <div class="container">
+         <H1>Create your profile:</H1><br>
+         <form method="POST" enctype="multipart/form-data" action="">
+            <div class="col-xs-12">
+               <div class="col-xs-3">
+                  <label for="firstName">First Name</label>
+               </div>
+               <div class="col-xs-4">
+                  <input type="text" name="firstName" required>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class="col-xs-3">
+                  <label for="middleName">Middle Name</label>
+               </div>
+               <div class="col-xs-4">
+                  <input type = "text" name = "middleName" placeholder = "Optional">
+               </div>
+            </div>
+            <div class="col-xs-12">
+               <div class="col-xs-3">
+                  <label for="lastName">Last Name</label>
+               </div>
+               <div class="col-xs-4">            
+                  <input type = "text" name = "lastName" required>
+               </div>
+            </div>
+            <div class="col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="gender">Gender</label>
+               </div>
+               <div class = "col-xs-4">
+                  <input type="radio" name="gender" value="m" checked> Male <br>
+                  <input type="radio" name="gender" value="f"> Female <br>
+                  <input type="radio" name="gender" value="o"> Other <br>
+                  <input type="radio" name="gender" value="d"> Declined to state <br>
+                  <input type="radio" name="gender" value="t"> Transgender <br>
+               </div>
+            </div>
+            <div class="col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="state">State</label>
+               </div>
+               <div class="col-xs-4">
+                  <select name="state" required>
+                     <option value = "Alabama">AL</option>
+                     <option value = "Alaska">AK</option>
+                     <option value = "Arizona">AZ</option>
+                     <option value = "Arkansas">AR</option>
+                     <option value = "California">CA</option>
+                     <option value = "Colorado">CO</option>
+                     <option value = "Connecticut">CT</option>
+                     <option value = "DC">DC</option>
+                     <option value = "Delaware">DE</option>
+                     <option value = "Florida">FL</option>
+                     <option value = "Georgia">GA</option>
+                     <option value = "Hawaii">HI</option>
+                     <option value = "Idaho">ID</option>
+                     <option value = "Illinois">IL</option>
+                     <option value = "Indiana">IN</option>
+                     <option value = "Iowa">IA</option>
+                     <option value = "Kansas">KS</option>
+                     <option value = "Kentucky">KY</option>
+                     <option value = "Louisiana">LA</option>
+                     <option value = "Maine">ME</option>
+                     <option value = "Maryland">MD</option>
+                     <option value = "Massachusetts">MA</option>
+                     <option value = "Michigan">MI</option>
+                     <option value = "Minnesota">MN</option>
+                     <option value = "Mississippi">MS</option>
+                     <option value = "Missouri">MO</option>
+                     <option value = "Montana">MT</option>
+                     <option value = "Nebraska">NE</option>
+                     <option value = "Nevada">CA</option>
+                     <option value = "New Hampshire">NH</option>
+                     <option value = "New Jersey">NJ</option>
+                     <option value = "New Mexico">NM</option>
+                     <option value = "New York">NY</option>
+                     <option value = "North Carolina">NC</option>
+                     <option value = "North Dakota">ND</option>
+                     <option value = "Ohio">OH</option>
+                     <option value = "Oklahoma">OK</option>
+                     <option value = "Oregon">OR</option>
+                     <option value = "Pennsylvania">PA</option>
+                     <option value = "Rhode Island">RI</option>
+                     <option value = "South Carolina">SC</option>
+                     <option value = "South Dakota">SD</option>
+                     <option value = "Tennessee">TN</option>
+                     <option value = "Texas">TX</option>
+                     <option value = "Utah">UT</option>
+                     <option value = "Vermont">VT</option>
+                     <option value = "Virginia">VA</option>
+                     <option value = "Washington">WA</option>
+                     <option value = "West Virginia">WV</option>
+                     <option value = "Wisconsin">WI</option>
+                     <option value = "Wyoming">WY</option>
+                     <option value = "N/A">N/A</option>
+                  </select>
+               </div>
+            </div>
+            <div class="col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="city">City</label>
+               </div>
+               <div class="col-xs-4">
+                  <input type="text" name="city" required>
+               </div>
+            </div>
+            <div class="col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="birthday">Birthday (mm/dd/yyyy)</label>
+               </div>
+               <div class = "col-xs-4">
+                  <input type = "date" name = "birthday" required>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label type="favoriteOS">Favorite OS</label>
+               </div>
+               <div class = "col-xs-4">            
+                  <select name ="favoriteOS" required>
+                  <option value ="windows"> Windows </option>
+                  <option value ="linux"> Linux </option>
+                  <option value ="OS X"> OS X </option>
+                  </select>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="phoneOS">Smartphone OS</label>
+               </div> 
+               <div class = "col-xs-4">
+                  <select name = "phoneOS" required>
+                  <option value = "android"> Android </option>
+                  <option value = "ios"> iOS </option>
+                  <option value = "windows"> Windows </option>
+                  <option value = "n/a"> No smartphone </option>
+                  </select>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="relationship">Relationship status</label>
+               </div>
+               <div class = "col-xs-4">
+                  <select name = "relationship" required>
+                  <option value = "single"> Single </option>
+                  <option value = "taken"> In a relationship / Married </option>
+                  <option value = "single"> What's a Relationship? </option>
+                  <option value = "declined"> Declined to state </option>
+                  </select>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="gaming">Gaming preference</label>
+               </div>
+               <div class = "col-xs-4">
+                  <select name = "gaming" required>
+                  <option value = "pc"> PC </option>
+                  <option value = "xbox"> Xbox </option>
+                  <option value = "xbox 360"> Xbox 360 </option>
+                  <option value = "xbox one"> Xbox One </option>
+                  <option value = "playstation 1"> Playstation 1 </option>
+                  <option value = "playstation 2"> Playstation 2 </option>
+                  <option value = "playstation 3"> Playstation 3 </option>
+                  <option value = "playstation 1"> Playstation 4 </option>
+                  <option value = "nintendo 64"> Nintendo 64 </option>
+                  <option value = "gamecube"> Gamecube </option>
+                  <option value = "wii"> Wii </option>
+                  <option value = "wii u"> Wii U </option>
+                  <option value = "oldschool"> Old school </option> 
+                  <option value = "none"> I don't game </option>
+                  </select>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label type="favLang1">#1 Favorite Programming Language</label> 
+               </div>
+               <div class = "col-xs-4">
+                  <input type = "text" name = "favLang1" required>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label type="favLang2">#2 Favorite Programming Language</label>
+               </div>
+               <div class="col-xs-4">
+                  <input type = "text" name = "favLang2" placeholder = "Optional">
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="favLang3">#3 Favorite Programming Language</label> 
+               </div>
+               <div class = " col-xs-4">
+                  <input type = "text" name = "favLang3" placeholder = "Optional">
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="fabHobby1">#1 Favorite Hobby</label>
+               </div>
+               <div class = " col-xs-4">
+                  <input type = "text" name = "favHobby1" required>
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="favHobby2">#2 Favorite Hobby</label>
+               </div>
+               <div class = " col-xs-4">
+                  <input type = "text" name = "favHobby2" placeholder = "Optional">
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3">
+                  <label for="favHobby3">#3 Favorite Hobby</label>
+               </div>
+               <div class = "col-xs-4">
+                  <input type = "text" name = "favHobby3" placeholder = "Optional">
+               </div>
+            </div>
+            <div class = "col-xs-12">
+               <div class = "col-xs-3 wpm">
+                  <label for="wpm">WPM</label> <a href= "http://www.typingtest.com/test.html?minutes=1&textfile=aesop.txt" target="_blank"> (click for link) </a>
+               </div>
+               <div class = "col-xs-4 wpm">
+                  <input type = "number" name = "wpm" min = "0" step = "1" placeholder = "Be honest :)" required>
+               </div>
+            </div>
+            <div class="col-xs-12">
+               <label for="myfile">Please upload a .jpg, .jpeg, .png and under 5mb</label>
+               <label class="warning">Please match specifications</label>
+               <input type="file" id = "image" name="myfile" /><br>
+               <script>
+                  var control = document.getElementById("image");
+                  control.addEventListener("change", function(event) {
+                     var filesize = parseFloat(control.files[0].size/1024).toFixed(2);
+                     var filename = document.getElementById("image").value;
+                     filename = filename.split('.');
+                     var length = filename.length - 1;        
+                  
+                     if(filename[length].toUpperCase() === "JPG" || filename[length].toUpperCase()  === "JPEG" || filename[length].toUpperCase() === "PNG") {
+                        if ((filesize / 1000) < 6) {
+                           console.log("here");
+                           document.getElementById("verify").value = "good"
+                        }
+                        else {
+                           alert("File size too large, please upload a picture under 5 mb");
+                           document.getElementById("verify").value = "bad"
+                        }
+                      
+                     }
+                     else {
+                        alert("Please insert a image of correct type, .jpg, .jpeg, .png");
+                        document.getElementById("verify").value = "bad"
+                     }
+                  }, false);
+               </script>
+            </div>
+            <div class="col-xs-12 submit">
+               <div class="col-xs-7">
+                  <br> <input class="pull-right" type="submit" name = "submit">
+               </div>
+            </div>
+            <div> 
+               <input type = "hidden"  id = "verify" name = "verify" value = "secret"></div>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>

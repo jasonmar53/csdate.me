@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+   <head>
+      <title> HASH PASSWORD </title>
+      <script src = "static/sha3.js"></script>
+      <body>
+         <input type = "text" id ="pw"/>
+         <button id = "hashPW" onclick="hashPW()"> Hash Password </button>
+<input type="password" class="form-control" id = "paw" name="password" placeholder="Password" required>
+         <script>
+            function hashPW() {
+               var password = document.getElementById("pw").value;
+               var text = "zzzzzzzzzzzz" + password;
+               var hash = CryptoJS.SHA3(text);
+               document.getElementById("paw").value = hash;
+            }
+         </script>
+
+<p id="demo">Click the button to change the text in this paragraph.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var password = "dsadsa";
+    var test = CryptoJS.SHA3("asdsdsa");
+alert(test.toString());
+    document.getElementById("hashedPW").innerHTML = test.toString();
+}
+</script>
+
+
+   <br><br>
+      
+   
+      </body>
+   <head>
+</html>

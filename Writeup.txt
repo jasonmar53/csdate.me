@@ -1,0 +1,12 @@
+Sigal Shaul, Ashley Newman, Jason Mar
+
+Database Schema:
+Our database consists of two tables:
+
+   Users(id INT, username VARCHAR(16), password VARCHAR(256), email VARCHAR(64), token VARCHAR(256), tokenTime TIMESTAMP, salt VARCHAR(256))
+
+   Questions(id INT, completed BOOLEAN, firstName VARCHAR(32), middleName VARCHAR(32), lastName VARCHAR(32), gender VARCHAR(1), state VARCHAR(32), city VARCHAR(32), birthday DATE, favoriteOS VARCHAR(16), phoneOS VARCHAR(16), relationship VARCHAR(32), gaming VARCHAR(32), favLang1 VARCHAR(32), favLang2 VARCHAR(32), favLang3 VARCHAR(32), favHobby1 VARCHAR(32), favHobby2 VARCHAR(32), favHobby3 VARCHAR(32), wpm INTEGER, pic VARCHAR(32), bio VARCHAR(256), interestedIn VARCHAR(1))
+
+Our application is written in python using web.py. To access and interact with the database, we created a connector in python and sent and received query results using it. We stored the results of each query as a list of tuples and this list of tuples was accessed in the python and html code to display it on our website.
+
+The database is first accessed when a user creates an account, where we use INSERT INTO to create a tuple for them in both tables. We then use an algorithm to match people based on similar answers they put for the different attributes on their account, in which we use SELECT to extract this attribute for comparison. SELECT is also used in all of the search options (single search and advanced search), where we look for matching attributes based on the item searched for. We also have an update profile option, which uses UPDATE TABLE to set the attributes to what the user has entered. We used a JOIN in the SELECT statement when displaying a person's profile since we wanted to be able to access the user's email, which was on the Users table and not the Questions table. The database also stores information about the user's token and their password salt, so that we can do authorization checks. The salt is created when the user creates their account and the token is created every time a user logs in; both operations use an UPDATE TABLE statement to enter this value in. All of the INSERT INTO and UPDATE TABLE commands were done in transactions that are committed once the function completes.

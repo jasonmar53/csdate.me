@@ -1,0 +1,90 @@
+$def with (userId, matches, search)
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="static/main.css">
+   <title>CSDate.me</title>
+</head>
+<body>
+   <div class="container-fluid row">
+      <div class="col-xs-12 block">
+         <div class="whitelogo">
+            <img src="/static/images/logo-white.png" alt="CSDate.me">
+         </div>
+         <form method="POST">
+            <div class="homeAndLogout">
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/logout" role="button">Log Out</a>
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/settings" role="button">Update Profile</a>
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/profile$userId" role="button">Profile</a>
+               <a class="btn btn-success btn-space pull-right" href="http://www.csdate.me/main" role="button">Home</a>
+            </div>
+         </form>
+      </div>
+   </div>
+   <form>
+      <div class = "col-xs-12 search">
+         <input type = "text" name = "search" placeholder = "ex: Java" required>
+         <select name = "attribute" required>
+            <option value = "firstName"> First name </option>
+            <option value = "middleName"> Middle name </option>
+            <option value = "lastName"> Last name </option>
+            <option value = "state"> State </option>
+            <option value = "city"> City </option>
+            <option value = "favoriteOs"> Favorite OS </option>
+            <option value = "phoneOs"> Smartphone OS </option>
+            <option value = "gaming"> Gaming preference </option>
+            <option value = "favLang"> Favorite Language </option>
+            <option value = "favHobby"> Favorite Hobby </option>
+            <option value = "wpm"> WPM Range (n-n) </option>
+         </select>
+         <button type="submit">Search</button>
+         <a type="button" class="btn-link" href="http://www.csdate.me/deepSearch">Advanced Search</a>
+      </div>
+   </form>
+   <div class="container">
+      <div class="col-xs-12">
+         $if (search==False):
+            <h2 class="text-center">People like you!</h2>
+         $else:
+            <h2 class="text-center">Results</h2>
+      </div>
+      <div class="col-xs-2"> </div>
+      <div class="col-xs-8">
+         <table class="table table-hover">
+            <tbody>
+               $for match in matches:
+                  $if (match[1] != 0):
+                     <tr>
+                        <th>
+                           <div class="entries">
+                              <img src="static/images/$match[20]" alt="$match[20]" class="img-responsive">
+                           </div>
+                        </th>
+                        <th>
+                           <h1 class="text-center nameHeader img-responsive">
+                              <a href="http://www.csdate.me/profile$match[0]">$match[2] $match[3] $match[4]</a>
+                           </h1>
+                           $if match[5] == 'm':
+                              <h3 class="text-center">Gender: Male</h3>
+                           $elif match[5] == 'f':
+                              <h3 class="text-center">Gender: Female</h3>
+                           $elif match[5] == 't':
+                              <h3 class="text-center">Gender: Transgender</h3>
+                           $elif match[5] == 'o':
+                              <h3 class="text-center">Gender: Other</h3>
+                           $elif match[5] == 'd':
+                              <h3 class="text-center">Gender: Declined to state</h3>
+                           <h3 class="text-center">$match[7], $match[6]</h3>
+                        </th>
+                     </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="col-xs-2"> </div>
+   </div>
+
+</body>
+</html>

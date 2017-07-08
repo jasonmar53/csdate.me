@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Author: Ashley -->
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="static/main.css">
+   <script src = "static/sha3.js"></script>
+   <title>Sign Up</title>
+</head>
+<body>
+   <div class="row">
+      <div class="col-xs-12">
+         <a class="btn btn-success pull-right" href="http://www.csdate.me/login" role="button">Log in</a>
+      </div>
+   </div>
+   <div class="container loginContainer col-xs-12 input">
+      <div class="loginPanel">
+         <div class="logo col-xs-12">
+            <img src="static/images/logo.png" alt="logo">
+         </div>
+         <form method="POST" class="form-horizontal">
+            <div class="col-xs-offset-2 col-xs-10 text-danger">
+               <p>Username or Email is already taken.</p>
+            </div>
+            <div class="row">
+               <div class="col-xs-12">
+                  <input type="text" name="username" id = "user" maxlength="16" class="form-control" placeholder="Username" required>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12">
+                  <input type="email" class="form-control" name="email" maxlength="32" placeholder="Email" required>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-12">
+                  <input type="password" class="form-control" id = "pw" name="plainpassword" placeholder="Password" required>
+                   <script>
+                     function hashPW() {
+                        var password = document.getElementById("pw").value;
+                        var salt = document.getElementById("user").value;
+                        password =  salt.concat(password);
+                        var hash = CryptoJS.SHA3(password);
+                        document.getElementById("password").value = hash;
+                     }
+                  </script>
+               </div>
+            </div>
+            <div> 
+               <input type = "hidden"  id = "password" name = "password">
+            </div>
+            <div class="form-group">
+               <div class="col-xs-12">
+                  <button type="submit" onclick= "hashPW()" value="Submit" class="btn btn-default pull-right">Register</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+   <script src="static/common.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
